@@ -97,7 +97,21 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 2) RADIO BUTTON (Sí en high_school_data)
+  // --- 2) BOTÓN "Mis archivos"
+  console.log("🔍 Buscando botón 'Mis archivos'...");
+  let fileButton = await waitForSelector("button.sc-iemWCZ.hPrUnF.dropbox-button");
+  if (fileButton) {
+    simulateClick(fileButton);
+    console.log("✅ Click en 'Mis archivos' realizado");
+    showToast("Click en 'Mis archivos' realizado. Por favor, selecciona el archivo manualmente.", true);
+  } else {
+    console.error("❌ No se encontró el botón 'Mis archivos'");
+    showToast("Error: No se encontró el botón 'Mis archivos'", false);
+    return;
+  }
+  await wait(1000);
+
+  // --- 3) RADIO BUTTON (Sí en high_school_data)
   let radio = await waitForSelector("input[name='high_school_data'][value='si']");
   if (radio) {
     radio.checked = true;
@@ -111,7 +125,7 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 3) BOTÓN "Añadir otra red social"
+  // --- 4) BOTÓN "Añadir otra red social"
   let addSocial = await waitForSelector("h5.sc-iqAclL.sc-hBMUJo.sc-csTbgd.cTvCPN.liylkT.kzXarH");
   if (addSocial) {
     simulateClick(addSocial);
@@ -124,10 +138,10 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 4) INPUT LinkedIn
+  // --- 5) INPUT LinkedIn
   let linkedin = await waitForSelector("input#url_linkedin");
   if (linkedin) {
-    simulateInput(linkedin, "TU LINKEDIN URL");
+    simulateInput(linkedin, "TU LINKEDIN RUL");
     console.log("✅ URL LinkedIn ingresada");
     showToast("URL LinkedIn ingresada con éxito", true);
   } else {
@@ -137,7 +151,7 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 5) INPUT Website
+  // --- 6) INPUT Website
   let website = await waitForSelector("input#url_website");
   if (website) {
     simulateInput(website, "TU WEB URL");
