@@ -4,7 +4,7 @@ function wait(ms) {
 }
 
 // Esperar a que un selector esté presente
-async function waitForSelector(selector, timeout = 10000) {
+async function waitForSelector(selector, timeout = 15000) {
   const interval = 100;
   let elapsed = 0;
   while (elapsed < timeout) {
@@ -72,7 +72,32 @@ function showToast(message, isSuccess = true) {
   console.log("🚀 Script iniciado en página final...");
   console.log(`📍 URL actual: ${window.location.href}`);
 
-  // --- 4) RADIO BUTTON (Sí en high_school_data)
+  // --- 1) CHECKBOX Términos y Condiciones
+  console.log("🔍 Buscando checkbox 'termsConditions.hiring'...");
+  let checkbox = await waitForSelector("input[name='termsConditions.hiring']");
+  if (checkbox) {
+    console.log("✅ Checkbox encontrado. Estado inicial:", checkbox.checked, "Valor inicial:", checkbox.value);
+    checkbox.checked = true;
+    simulateClick(checkbox);
+    simulateInteraction(checkbox);
+    await wait(500); // Breve espera para que la página procese
+    // Verificar que el checkbox esté marcado
+    if (checkbox.checked) {
+      console.log("✅ Checkbox 'Términos y Condiciones' marcado correctamente");
+      showToast("Checkbox 'Términos y Condiciones' marcado con éxito", true);
+    } else {
+      console.error("❌ El checkbox 'Términos y Condiciones' no se marcó correctamente. Estado:", checkbox.checked);
+      showToast("Error: No se pudo marcar el checkbox 'Términos y Condiciones'", false);
+      return;
+    }
+  } else {
+    console.error("❌ No se encontró el checkbox 'Términos y Condiciones'");
+    showToast("Error: No se encontró el checkbox 'Términos y Condiciones'", false);
+    return;
+  }
+  await wait(1000);
+
+  // --- 2) RADIO BUTTON (Sí en high_school_data)
   let radio = await waitForSelector("input[name='high_school_data'][value='si']");
   if (radio) {
     radio.checked = true;
@@ -86,7 +111,7 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 6) BOTÓN "Añadir otra red social"
+  // --- 3) BOTÓN "Añadir otra red social"
   let addSocial = await waitForSelector("h5.sc-iqAclL.sc-hBMUJo.sc-csTbgd.cTvCPN.liylkT.kzXarH");
   if (addSocial) {
     simulateClick(addSocial);
@@ -99,7 +124,7 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 7) INPUT LinkedIn
+  // --- 4) INPUT LinkedIn
   let linkedin = await waitForSelector("input#url_linkedin");
   if (linkedin) {
     simulateInput(linkedin, "TU LINKEDIN URL");
@@ -112,7 +137,7 @@ function showToast(message, isSuccess = true) {
   }
   await wait(1000);
 
-  // --- 8) INPUT Website
+  // --- 5) INPUT Website
   let website = await waitForSelector("input#url_website");
   if (website) {
     simulateInput(website, "TU WEB URL");
