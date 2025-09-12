@@ -1,6 +1,6 @@
 # 🤖 HiringRoom Automation
 
-¡Bienvenidos al proyecto **HiringRoom Automation**! 🚀 Esta extensión de Chrome está diseñada para automatizar tareas repetitivas en la plataforma **HiringRoom**, específicamente en la página final de un formulario. Con esta herramienta, puedes ahorrar tiempo al completar campos y realizar acciones como seleccionar opciones, hacer clics y llenar URLs de redes sociales de manera automática.
+🚀 Esta extensión de Chrome está diseñada para automatizar tareas repetitivas en la plataforma **HiringRoom**, específicamente en la página final de un formulario. Con esta herramienta, puedes ahorrar tiempo al completar campos y realizar acciones como seleccionar opciones, hacer clics y llenar URLs de redes sociales de manera automática.
 
 ## 🎯 ¿Qué hace esta extensión?
 
@@ -8,8 +8,8 @@ La extensión realiza las siguientes acciones en la página final de un formular
 
 1. **Selecciona la opción "Sí" en el campo `high_school_data`**: Marca automáticamente el radio button correspondiente.
 2. **Añade una red social**: Simula un clic en el botón "Añadir otra red social".
-3. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`https://www.linkedin.com/in/nahuel-diaz`).
-4. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`https://nahueldiazcv.vercel.app`).
+3. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`LINKEDIN URL`).
+4. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`WEB URL`).
 5. **Muestra notificaciones**: Utiliza notificaciones tipo "toast" para informar sobre el éxito o fallo de cada acción.
 
 La extensión es ideal para usuarios que necesitan completar formularios de manera recurrente en HiringRoom, optimizando el proceso y reduciendo errores manuales.
