@@ -8,8 +8,8 @@ La extensión realiza las siguientes acciones en la página final de un formular
 
 1. **Selecciona la opción "Sí" en el campo `high_school_data`**: Marca automáticamente el radio button correspondiente.
 2. **Añade una red social**: Simula un clic en el botón "Añadir otra red social".
-3. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`LINKEDIN URL`).
-4. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`WEB URL`).
+3. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`TU LINKEDIN URL`).
+4. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`TU WEB URL`).
 5. **Muestra notificaciones**: Utiliza notificaciones tipo "toast" para informar sobre el éxito o fallo de cada acción.
 
 La extensión es ideal para usuarios que necesitan completar formularios de manera recurrente en HiringRoom, optimizando el proceso y reduciendo errores manuales.
@@ -36,7 +36,7 @@ Sigue estos pasos para instalar y usar la extensión en tu navegador:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/hiringroom-automation.git
+   git clone https://github.com/nahuu0809/hiringroom-automation.git
    ```
 
 2. **Carga la extensión en Chrome**:
