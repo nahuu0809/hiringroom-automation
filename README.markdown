@@ -1,6 +1,6 @@
 # 🤖 HiringRoom Automation
 
-¡Bienvenidos al proyecto **HiringRoom Automation**! 🚀 Esta extensión de Chrome está diseñada para automatizar tareas repetitivas en la página final de un formulario en la plataforma **HiringRoom**. Con esta herramienta, puedes ahorrar tiempo al completar campos, realizar clics y abrir diálogos de selección de archivos de manera automática, optimizando el proceso y reduciendo errores manuales.
+🚀 Esta extensión de Chrome está diseñada para automatizar tareas repetitivas en la página final de un formulario en la plataforma **HiringRoom**. Con esta herramienta, puedes ahorrar tiempo al completar campos, realizar clics y abrir diálogos de selección de archivos de manera automática, optimizando el proceso y reduciendo errores manuales.
 
 ## 🎯 ¿Qué hace esta extensión?
 
@@ -10,8 +10,8 @@ La extensión realiza las siguientes acciones en la página final de un formular
 2. **Clic en el botón "Mis archivos"**: Simula un clic en el botón para abrir el diálogo de selección de archivos (el usuario debe seleccionar el archivo manualmente).
 3. **Selecciona la opción "Sí" en el campo `high_school_data`**: Marca automáticamente el radio button correspondiente.
 4. **Añade una red social**: Simula un clic en el botón "Añadir otra red social".
-5. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`https://www.linkedin.com/in/nahuel-diaz`).
-6. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`https://nahueldiazcv.vercel.app`).
+5. **Completa el campo de LinkedIn**: Ingresa una URL de LinkedIn predefinida (`TU LINKEDIN URL`).
+6. **Completa el campo de Website**: Ingresa una URL de sitio web predefinida (`TU WEB URL`).
 7. **Muestra notificaciones**: Utiliza notificaciones tipo "toast" para informar sobre el éxito o fallo de cada acción.
 
 Esta extensión es ideal para usuarios que necesitan completar formularios de manera recurrente en HiringRoom, agilizando tareas repetitivas.
@@ -38,7 +38,7 @@ Sigue estos pasos para instalar y usar la extensión en tu navegador:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/hiringroom-automation.git
+   git clone https://github.com/nahuu0809/hiringroom-automation.git
    ```
 
 2. **Carga la extensión en Chrome**:
