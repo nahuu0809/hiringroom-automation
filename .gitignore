@@ -1,0 +1,16 @@
+node_modules/
+npm-debug.log*
+
+# paquetes de extensión y claves
+*.zip
+*.crx
+*.pem
+
+.env
+.env.*
+*.log
+
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
